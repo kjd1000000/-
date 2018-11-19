@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    var a = b = c = 10;
+    c= 100
+    console.log(a)
+    var d = e = f ={a:1}        
+    console.log(d)
+    
+    var a = true
+    //对象数据类型 数组 正则 date实例 math
+    ///三个判断 三个循环
+    //if else    switch case      bealean ? a : b      
+    if([]==[])   false //[]{}会开辟新内存地址不同
+    if(![]==[])  true  //！先转 布尔 在比较是否相同类型  否则再转number再比较
+    if(NaN ==NaN) false
+    if (undefined == Null)  //true
+    if (undefined === Null)  //false
+    //五种布尔转为false 的   1:""  2:undefined 3:null 4:nan 5:0
+    //4种 转number为0的   null   ""      []->tostring->""->0
+    //转数字为nan的两种     undefined 转number   非有效数字转number  为 NaN
+    //==会进行数据转换在进行比较
+    //===绝对比较
+    //获取 等号在右边
+    var a = 1
+    //赋值 等号在左边
+    o = {a :12}
+    a = o.a
+    o.a
+    o["a"]// 属性名要加""
+    o['1'] //数字要加''[]
+
+    for (var key in o){
+        console.log(typeof key)
+        
+    }
+    function sum() {
+        var total = 0
+        for (var i = 0; i < arguments.length; i++){
+            var cur = +arguments[i]
+            if (!isNaN(cur)) {
+                total +=cur
+            }
+        }
+        return cur
+    }
+    
+
+    </script>
+</body>
+</html>
